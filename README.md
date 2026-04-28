@@ -1,1 +1,1 @@
-Pro Natura Luzern betreut mehr als 25 Naturschutzgebiete im Kanton Luzern.
+Pro Natura Luzern betreut 28 Naturschutzgebiete im Kanton Luzern.
