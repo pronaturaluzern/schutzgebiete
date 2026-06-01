@@ -4,15 +4,12 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
-            code: 'EPSG:2056',
-            //extent: [2630127.986000, 1180568.483000, 2681764.349000, 1237690.711000],
-            units: 'm'})
+        extent: [762335.325346, 5887266.564492, 1056704.042740, 6010795.552225], maxZoom: 28, minZoom: 1
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([2598402.343815, 1167613.565260, 2715586.587629, 1249681.662556], map.getSize());
+map.getView().fit([762335.325346, 5887266.564492, 1056704.042740, 6010795.552225], map.getSize());
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
@@ -128,7 +125,7 @@ var featureOverlay = new ol.layer.Vector({
 });
 
 var doHighlight = false;
-var doHover = true;
+var doHover = false;
 
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
     var popupText = '';
@@ -860,18 +857,6 @@ let measuring = false;
 
 //layer search
 
-var searchLayer = new SearchLayer({
-    layer: lyr_SchutzgebieteProNaturaLuzern_4,
-    colName: 'Schutzgebiet',
-    zoom: 10,
-    collapsed: true,
-    map: map,
-    maxResults: 10,
-});
-map.addControl(searchLayer);
-document.getElementsByClassName('search-layer')[0].getElementsByTagName('button')[0].className += ' fa fa-binoculars';
-document.getElementsByClassName('search-layer-input-search')[0].placeholder = 'Search feature ...';
-    
 
 //scalebar
 

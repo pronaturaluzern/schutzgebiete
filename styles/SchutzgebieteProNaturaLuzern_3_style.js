@@ -10,18 +10,19 @@ var style_SchutzgebieteProNaturaLuzern_3 = function(feature, resolution){
     var labelText = ""; 
     var value = feature.get("");
     var labelFont = "13.0px \'Helvetica\', sans-serif";
-    var labelFill = "#265b24";
-    var bufferColor = "#fafafa";
-    var bufferWidth = 4.5;
+    var labelFill = "#060655";
+    var bufferColor = "";
+    var bufferWidth = 0;
     var textAlign = "left";
     var offsetX = 0;
     var offsetY = 0;
     var placement = 'point';
-    if (feature.get("Name") !== null) {
-        labelText = String(feature.get("Name"));
+    if (feature.get("Schutzgebiet") !== null) {
+        labelText = String(feature.get("Schutzgebiet"));
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(77,175,74,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.6479999999999997}),
+        image: new ol.style.Circle({radius: 5.2 + size,
+            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(50,87,128,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(72,123,182,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
