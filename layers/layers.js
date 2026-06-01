@@ -52,10 +52,7 @@ var jsonSource_SchutzgebieteProNaturaLuzern_3 = new ol.source.Vector({
 jsonSource_SchutzgebieteProNaturaLuzern_3.addFeatures(features_SchutzgebieteProNaturaLuzern_3);
 var lyr_SchutzgebieteProNaturaLuzern_3 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_SchutzgebieteProNaturaLuzern_3,
-maxResolution:280.0446615226196,
- minResolution:7.001396582727014,
-
+                source:jsonSource_SchutzgebieteProNaturaLuzern_3, 
                 style: style_SchutzgebieteProNaturaLuzern_3,
                 popuplayertitle: 'Schutzgebiete Pro Natura Luzern',
                 interactive: true,
