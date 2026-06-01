@@ -116,7 +116,7 @@ lyr_tlm_kantonsgebiet_1.set('fieldImages', {'id': 'TextEdit', 'uuid': 'TextEdit'
 lyr_SchutzgebieteProNaturaLuzern_2.set('fieldImages', {'fid': 'Hidden', 'Objektnummer': 'Range', 'Name': 'TextEdit', 'sektion': 'Hidden', });
 lyr_SchutzgebieteProNaturaLuzern_3.set('fieldImages', {'fid': 'Hidden', 'Schutzgebiet': 'TextEdit', 'link': 'TextEdit', });
 lyr_tlm_kantonsgebiet_1.set('fieldLabels', {'id': 'no label', 'uuid': 'no label', 'datum_aenderung': 'no label', 'datum_erstellung': 'no label', 'erstellung_jahr': 'no label', 'erstellung_monat': 'no label', 'grund_aenderung': 'no label', 'herkunft': 'no label', 'herkunft_jahr': 'no label', 'herkunft_monat': 'no label', 'revision_jahr': 'no label', 'revision_monat': 'no label', 'revision_qualitaet': 'no label', 'objektart': 'no label', 'kantonsnummer': 'no label', 'see_flaeche': 'no label', 'kantonsflaeche': 'no label', 'name': 'no label', 'icc': 'no label', 'einwohnerzahl': 'no label', });
-lyr_SchutzgebieteProNaturaLuzern_2.set('fieldLabels', {'Objektnummer': 'hidden field', 'Name': 'inline label - always visible', });
+lyr_SchutzgebieteProNaturaLuzern_2.set('fieldLabels', {'Objektnummer': 'hidden field', 'Name': 'header label - visible with data', });
 lyr_SchutzgebieteProNaturaLuzern_3.set('fieldLabels', {'Schutzgebiet': 'header label - visible with data', 'link': 'header label - visible with data', });
 lyr_SchutzgebieteProNaturaLuzern_3.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
