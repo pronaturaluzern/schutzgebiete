@@ -4,8 +4,7 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1,
-		 center: ol.proj.fromLonLat([8.187405, 47.072893]), zoom: 10
+         maxZoom: 28, minZoom: 1
 		})
 });
 
