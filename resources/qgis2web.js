@@ -4,12 +4,12 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-        extent: [762335.325346, 5887266.564492, 1056704.042740, 6010795.552225], maxZoom: 28, minZoom: 1
+        extent: [871978.123537, 5904820.415587, 948380.847939, 5989443.427523], maxZoom: 28, minZoom: 1
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([762335.325346, 5887266.564492, 1056704.042740, 6010795.552225], map.getSize());
+map.getView().fit([871978.123537, 5904820.415587, 948380.847939, 5989443.427523], map.getSize());
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
@@ -473,11 +473,11 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
-        titleElement.className = 'top-right-title ol-control';
+        titleElement.className = 'top-left-title ol-control';
         titleElement.innerHTML = '<h2 class="project-title">Schutzgebiete Pro Natura Luzern</h2>';
         return titleElement;
     })(),
-    target: 'top-right-container'
+    target: 'top-left-container'
 });
 map.addControl(Title)
     
