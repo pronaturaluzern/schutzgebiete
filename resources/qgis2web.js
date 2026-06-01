@@ -5,7 +5,7 @@ var map = new ol.Map({
     layers: layersList,
     view: new ol.View({
          maxZoom: 28, minZoom: 1
-		})
+    })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
