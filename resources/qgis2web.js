@@ -13,12 +13,12 @@ var isMobile = window.innerWidth <= 768;
 
 if (isMobile) {
     map.getView().fit(
-        [856511, 5881445, 963475, 5999917],
+        [856511, 5889445, 963475, 6007917],
         { size: map.getSize(), padding: [20, 20, 20, 20] }
     );
 } else {
     map.getView().fit(
-        [872309, 5898369, 948712, 5982992],
+        [872309, 5906369, 948712, 5990992],
         { size: map.getSize(), padding: [20, 20, 20, 20] }
     );
 }
