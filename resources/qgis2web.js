@@ -9,22 +9,21 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS" for mobile and desktop = Ruswil
-// Warte bis die Karte vollständig gerendert ist, dann passe die View an
-map.once('rendercomplete', function() {
-    var isMobile = window.innerWidth <= 768;
+var isMobile = window.innerWidth <= 768;
 
-    if (isMobile) {
-        map.getView().fit(
-            [838933, 5896445, 945897, 6014917],
-            { size: map.getSize(), padding: [20, 20, 20, 20] }
-        );
-    } else {
-        map.getView().fit(
-            [871978.123537, 5904820.415587, 948380.847939, 5989443.427523],
-            { size: map.getSize(), padding: [20, 20, 20, 20] }
-        );
-    }
-});
+if (isMobile) {
+    // Mobile: weiter rausgezoomt, zentriert auf Ruswil
+    map.getView().fit(
+        [838933, 5896445, 945897, 6014917],
+        { size: map.getSize(), padding: [20, 20, 20, 20] }
+    );
+} else {
+    // Desktop: gleiche Grösse wie original, aber Mittelpunkt auf Ruswil
+    map.getView().fit(
+        [854213, 5913369, 930616, 5997992],
+        { size: map.getSize(), padding: [20, 20, 20, 20] }
+    );
+}
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
