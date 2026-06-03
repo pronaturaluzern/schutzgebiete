@@ -12,15 +12,13 @@ var map = new ol.Map({
 var isMobile = window.innerWidth <= 768;
 
 if (isMobile) {
-    // Mobile: weiter rausgezoomt, zentriert auf Ruswil
     map.getView().fit(
-        [838933, 5896445, 945897, 6014917],
+        [856511, 5896445, 963475, 6014917],
         { size: map.getSize(), padding: [20, 20, 20, 20] }
     );
 } else {
-    // Desktop: gleiche Grösse wie original, aber Mittelpunkt auf Ruswil
     map.getView().fit(
-        [854213, 5913369, 930616, 5997992],
+        [872309, 5913369, 948712, 5997992],
         { size: map.getSize(), padding: [20, 20, 20, 20] }
     );
 }
